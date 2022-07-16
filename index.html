@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Kanban App</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header-app">
+        <div class="l-container">
+            <img class="logo" src="imagenes/trello.png" alt="Logo Kanban App">
+            <div class="titulo-app">Kanban App Stiven</div>
+            <button id="nuevaTarea" class="button button-primary">Crear nueva tarea</button>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- Contenedor Columnas -->
+    <main class="main-app">
+        <div>
+            <!-- Columna Tareas por hacer -->
+            <section class="section-tap">
+                <h2 class="section-status-title">Por hacer</h2>
+                <div class="container-task" id="todoTask"></div>
+            </section>
+            <!-- End Columna Tareas por hacer -->
+            <!-- Columna Tareas En progreso -->
+            <section class="section-tap">
+                <h2 class="section-status-title">En progreso</h2>
+                <div class="container-task" id="progressTask"></div>
+            </section>
+            <!-- End Columna Tareas En progreso -->
+            <!-- Columna Tareas Finalizadas -->
+            <section class="section-tap">
+                <h2 class="section-status-title">Finalizadas</h2>
+                <div class="container-task" id="doneTask"></div>
+            </section>
+            <!-- End Columna Tareas Finalizadas -->
+        </div>
+    </main>
+    <!-- End Contenedor columnas -->
+    <!-- Formulario Crear nueva tarea -->
+    <div id="formularioTarea" class="modalTarea">
+        <table>
+            <tr>
+                <td>Título de la tarea</td>
+                <td><input type="text" class="input-form" name="tituloTarea" id="tituloTarea"></td>
+            </tr>
+            <tr>
+                <td>Descripción de la tarea</td>
+                <td><input type="text" class="input-form" name="descripcionTarea" id="descripcionTarea"></td>
+            </tr>
+            <tr>
+                <td>Responsable</td>
+                <td><input type="text" class="input-form" name="responsable" id="responsable"></td>
+            </tr>
+            <tr>
+                <td>Fecha de entrega</td>
+                <td><input type="date" class="input-form" name="fechaEntrega" id="fechaEntrega"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="guardarTarea" class="button button-success">Guardar Tarea</button></td>
+            </tr>
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

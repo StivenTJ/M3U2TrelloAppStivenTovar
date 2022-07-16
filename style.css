@@ -1,0 +1,74 @@
+.logo {
+    width: 30px;
+    float: left;
+}
+
+.button-primary {
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: 700;
+}
+
+.button-success {
+    background-color: rgb(37, 148, 37);
+    color: white;
+    font-weight: 700;
+}
+
+.button {
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    font-size: 15px;
+}
+
+.input-form {
+    height: 30px;
+    border-radius: 7px;
+    border: 1px solid grey;
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.button-primary:hover {
+    background-color: rgb(136, 177, 255);
+}
+
+.button-primary:active {
+    background-color: cornflowerblue;
+    transform: translateY(2px);
+}
+
+.button-success:hover {
+    background-color: limegreen;
+}
+
+.button-success:active {
+    background-color: rgb(37, 148, 37);
+    transform: translateY(2px);
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: whitesmoke;
+}
+
+.l-container {
+    background-color: white;
+    height: 40px;
+}
+
+.titulo-app {
+    font-weight: 700;
+    float: left;
+    padding-left: 15px;
+    font-size: 20px;
+    color: rgb(7, 88, 187);
+}
+
+#nuevaTarea {
+    float: right;
+}
