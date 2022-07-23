@@ -1,18 +1,43 @@
 .logo {
     width: 30px;
     float: left;
+    margin-left: 4%;
 }
 
 .button-primary {
     background-color: cornflowerblue;
     color: white;
     font-weight: 700;
+    margin-right: 3%;
 }
 
 .button-success {
     background-color: rgb(37, 148, 37);
     color: white;
     font-weight: 700;
+}
+
+.button-danger {
+    background-color: rgb(148, 37, 37);
+    color: white;
+    font-weight: 700;
+}
+
+.button-eliminar {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 40px;
+    float: right;
+}
+
+.button-eliminar:active {
+    background-color: rgb(239, 75, 75);
+    transform: translateY(2px);
+}
+
+.icon-eliminar {
+    width: 30px;
 }
 
 .button {
@@ -51,15 +76,25 @@
     transform: translateY(2px);
 }
 
+.button-danger:hover {
+    background-color: rgb(205, 50, 50);
+}
+
+.button-danger:active {
+    background-color: rgb(148, 37, 37);
+    transform: translateY(2px);
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(232, 232, 232);
 }
 
 .l-container {
-    background-color: white;
+    background-color: rgb(232, 232, 232);
     height: 40px;
     width: 100%;
+    margin-top: 2%;
 }
 
 .titulo-app {
@@ -76,13 +111,19 @@ body {
 
 .section-tap {
     height: 500px;
-    width: 28%;
+    width: 30%;
     background-color: white;
-    float: left;
     border: 1px solid rgb(47, 47, 47);
     border-radius: 15px;
     margin-top: 2.5%;
-    margin-left: 4%;
+    margin-left: 2.3%;
+    display: inline-table;
+}
+
+.line-title {
+    width: 70%;
+    margin-top: -15px;
+    margin-bottom: 30px;
 }
 
 .section-status-title {
@@ -129,4 +170,19 @@ body {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.tareaNueva {
+    border: 1px solid #888;
+    width: 90%;
+    border-radius: 10px;
+    height: auto;
+    display: flex;
+    margin: auto;
+}
+
+.tabla-tareas {
+    display: flex;
+    margin: auto;
+    width: 82%;
 }
