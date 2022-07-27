@@ -70,3 +70,6 @@ const devolverTareas = async() => {
 }
 devolverTareas();
 /* End Traer Tareas */
+// const eliminarTarea = (id) => {
+//     return id.parentNode.removeChild(id);
+// }

@@ -1,3 +1,3 @@
-const eliminarTarea = (id) => {
-    alert(id);
-}
+// const eliminarTarea = (id) => {
+//     return id.parentNode.removeChild(id);
+// }
