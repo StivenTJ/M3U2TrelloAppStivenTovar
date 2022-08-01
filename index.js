@@ -20,6 +20,8 @@ window.onclick = function(event) {
 }
 
 /* End Ventana Modal */
+
+
 /* Traer Tareas */
 const tareasHTML = document.getElementById("todoTask");
 const obtenerTareas = (id) => {
@@ -30,12 +32,26 @@ const obtenerTareas = (id) => {
     })
 }
 
+let botonGuardarTarea = document.getElementById("guardarTarea");
+botonGuardarTarea.onclick = function() {
+    let tituloTarea = document.getElementById("tituloTarea").value;
+    let descripcionTarea = document.getElementById("descripcionTarea").value;
+    let responsable = document.getElementById("responsable").value;
+    let fechaEntrega = document.getElementById("fechaEntrega").value;
+    tareas.push({ id: tareas.length + 1, titulo: tituloTarea, descripcion: descripcionTarea, responsable: responsable, fechaEntrega: fechaEntrega });
+    alert("Tarea Creada Exitosamente");
+    let formularioTarea = document.getElementById("formularioTarea");
+    formularioTarea.style.display = "none";
+    devolverTareas();
+}
+
 const devolverTareas = async() => {
     let tarea = [];
     for (let i = 0; i < tareas.length; i++) {
         tarea[i] = await obtenerTareas(i);
-        let newHTMLCode = `
-            <div class="tareaNueva">
+        if (tarea[i].titulo === "" || tarea[i].titulo == null) {} else {
+            let newHTMLCode = `
+            <div class="tareaNueva" id="${tarea[i].id}">
                 <table class="tabla-tareas">
                     <tr>
                         <td colspan="2">
@@ -65,11 +81,9 @@ const devolverTareas = async() => {
                 </div>
             </div>
         `;
-        tareasHTML.innerHTML += newHTMLCode;
+            tareasHTML.innerHTML += newHTMLCode;
+        }
     }
 }
 devolverTareas();
 /* End Traer Tareas */
-// const eliminarTarea = (id) => {
-//     return id.parentNode.removeChild(id);
-// }

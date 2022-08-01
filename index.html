@@ -22,23 +22,23 @@
     <!-- End Header -->
     <!-- Contenedor Columnas -->
     <main class="main-app">
-        <div class="container-task">
+        <div class="container-full-task" id="container-full-task">
             <!-- Columna Tareas por hacer -->
-            <div class="section-tap">
+            <div class="section-tap" id="containerToDo">
                 <h2 class="section-status-title">Por hacer</h2>
                 <hr class="line-title">
                 <div class="container-task" id="todoTask"></div>
             </div>
             <!-- End Columna Tareas por hacer -->
             <!-- Columna Tareas En progreso -->
-            <div class="section-tap">
+            <div class="section-tap" id="containerInProgress">
                 <h2 class="section-status-title">En progreso</h2>
                 <hr class="line-title">
                 <div class="container-task" id="progressTask"></div>
             </div>
             <!-- End Columna Tareas En progreso -->
             <!-- Columna Tareas Finalizadas -->
-            <div class="section-tap">
+            <div class="section-tap" id="containerDone">
                 <h2 class="section-status-title">Finalizadas</h2>
                 <hr class="line-title">
                 <div class="container-task" id="doneTask"></div>
@@ -53,7 +53,7 @@
             <span class="close">&times;</span>
             <h3 class="titulo-modal">Crear Tarea</h3>
             <center>
-                <table class="tabla-formulario">
+                <table class="tabla-formulario" id="myTable">
                     <tr>
                         <td>Título de la tarea</td>
                         <td><input type="text" class="input-form" name="tituloTarea" id="tituloTarea"></td>
@@ -76,7 +76,7 @@
                     <tr>
                         <td colspan="2">
                             <center>
-                                <button id="guardarTarea" onclick="" class="button button-success">Guardar Tarea</button>
+                                <button id="guardarTarea" class="button button-success">Guardar Tarea</button>
                                 <button id="cancelar" class="button button-danger">Cancelar</button>
                             </center>
                         </td>
@@ -86,6 +86,7 @@
             <br>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <script type="module" src="index.js"></script>
     <script src="funciones.js"></script>
 </body>
